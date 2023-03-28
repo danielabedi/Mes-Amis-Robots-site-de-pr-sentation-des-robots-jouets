@@ -1,0 +1,69 @@
+@font-face {
+  font-family: scrum;
+  src: url(./SEGA.TTF);
+}
+.App {
+  text-align: center;
+  width: 70%;
+  height: 85%;
+  margin: 3% auto;
+  background: linear-gradient(0.25turn,  rgb(0,120,124),rgb(1,101,115) ,rgb(5,30,86),rgb(6,35,86));
+}
+h1{
+  font-family: scrum;
+  color: rgb(107, 227, 235);
+  padding-top: 20px;
+  text-align: center;
+}
+input{
+  background-color: #c1f0f2;
+  height: 30px;
+  border: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18%;
+  height: 30%;
+  background-color: rgba(150,235,207,255);
+  border-radius: 3px;
+  margin: auto 15px;
+  cursor: wait;
+}
+.card:hover {
+  background-color: gold;
+  width: 20%;
+  height: 35%;
+}
+.robo-image{
+  width: 70%;
+  height: 65%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.tex{
+  font-size: 1em;
+  margin:  auto;
+}
+.tex-mail{
+  font-size: 13px;
+}
+.disposition{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+  height: 700px;
+}
+
+@media screen {
+  
+}
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
