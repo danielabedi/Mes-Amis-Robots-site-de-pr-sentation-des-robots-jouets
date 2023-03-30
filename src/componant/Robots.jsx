@@ -1,9 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Card from "./Card";
- 
-export default function Robos()import { useState } from "react";
-import Card from "./Card";
 
 export default function Robos() {
   const [data, setData] = useState([]);
@@ -19,17 +16,29 @@ export default function Robos() {
     setSearchTerm(event.target.value);
   };
 
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then((data) => setData(data))
+      .catch(error => console.log(error));
+  }, []);
+
   return (
-    <div className="disposition">
-      <input type="text" onChange={handleSearch} />
-      {filteredData.length > 0 ? (
+    <div>
+     <input type="text" onChange={handleSearch} />
+     <div className="disposition">
+      
+        {filteredData.length > 0 ? (
         filteredData.map((user, id) => {
           return user ? <Card robo={user} key={id} /> : <p>En cours de chargement...</p>;
-        })
-      ) : (
-        <p>{searchTerm.length >= 3 ? "Aucun résultat trouvé." : "Entrez au moins 3 caractères pour commencer la recherche."}</p>
-      )}
+         })
+        ) : (
+         <p>{searchTerm.length >= 3 ? "Aucun résultat trouvé." : "Entrez au moins 3 caractères pour commencer la recherche."}</p>
+       )}
+      </div>
     </div>
+    
   );
 }
+
 

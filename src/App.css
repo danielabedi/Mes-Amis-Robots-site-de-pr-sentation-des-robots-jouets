@@ -38,7 +38,6 @@ input{
 }
 .robo-image{
   width: 70%;
-  height: 65%;
   margin: auto;
   padding-bottom: 10px;
 }
@@ -59,11 +58,11 @@ input{
   height: 700px;
 }
 
-@media screen {
-  
-}
 
-/* @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
+@media screen and (min-width: 975px) {
+  .disposition{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
